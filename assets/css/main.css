@@ -63,7 +63,7 @@ input:focus {
   margin-top: -11px;
 }
 .chat-content .chat-list-msg {
-  background-color: #f0f0f0;
+  background-color: #e5e5e5;
   height: 280px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -90,7 +90,7 @@ input:focus {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .chat-content {
     position: relative;
     top: 0;
