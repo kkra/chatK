@@ -16,12 +16,12 @@ input:focus{
 }
 .item-msg{
 	&.ng-enter{
-		animation-name: slideInDown;
-		-webkit-animation-name: slideInDown;
+		animation-name: fadeInDown;
+		-webkit-animation-name: fadeInDown;
 	}
 	&.ng-leave{
-		animation-name: fadeOut;
-		-webkit-animation-name: fadeOut;
+		animation-name: hinge;
+		-webkit-animation-name: hinge;
 	}
 }
 
@@ -49,17 +49,17 @@ input:focus{
 	margin-top: -190px;
 	left: 50%;
 	margin-left: -130px;
-	box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+	box-shadow: 0px 5px 20px rgba(0,0,0,0.4);
 	z-index: 9999;
 	border-radius: 3px;
 	overflow: hidden;
 	.chat-title-content{
 		background-color: @second;
-		// border-radius: 3px 3px 0 0;
 		color: #fff;
 		padding: 12px 10px;
 		position: relative;
-		box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+		box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+		z-index: 99;
 		.chat-title{
 			font-size: 1.2em;
 		}
@@ -83,7 +83,8 @@ input:focus{
 	}
 	.item-msg{
 		position: relative;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
+		width: 90%;
 		strong{
 			padding: 5px 10px;
 			border-radius: 5px 5px 0 0;

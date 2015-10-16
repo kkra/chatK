@@ -14,12 +14,12 @@ input:focus {
   box-shadow: none !important;
 }
 .item-msg.ng-enter {
-  animation-name: slideInDown;
-  -webkit-animation-name: slideInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
 }
 .item-msg.ng-leave {
-  animation-name: fadeOut;
-  -webkit-animation-name: fadeOut;
+  animation-name: hinge;
+  -webkit-animation-name: hinge;
 }
 .text-md {
   font-size: 1.1em;
@@ -41,7 +41,7 @@ input:focus {
   margin-top: -190px;
   left: 50%;
   margin-left: -130px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
   z-index: 9999;
   border-radius: 3px;
   overflow: hidden;
@@ -51,7 +51,8 @@ input:focus {
   color: #fff;
   padding: 12px 10px;
   position: relative;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+  z-index: 99;
 }
 .chat-content .chat-title-content .chat-title {
   font-size: 1.2em;
@@ -75,7 +76,8 @@ input:focus {
 }
 .chat-content .item-msg {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  width: 90%;
 }
 .chat-content .item-msg strong {
   padding: 5px 10px;

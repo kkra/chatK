@@ -26,10 +26,10 @@
 					<button type="submit" class="btn btn-primary btn-sm" id="saveInfo">Guardar Datos</button>
 				</form>
 			</div>
-			<div class="item-msg animated" ng-repeat="item in Messages | orderBy:'date':true">
+			<div class="item-msg animated pull-{{item.align}}" ng-repeat="item in Messages">
 				<strong style="color: {{item.color}}" class="pull-{{item.align}}"><i class="ion-person"></i> {{item.username}}</strong>
 				<span class="clearfix"></span>
-				<div class="item-msg-text">{{item.message}}</div>
+				<div class="item-msg-text text-{{item.align}}">{{item.message}}</div>
 			</div>
 		</div>
 		<div class="chat-write-msg">

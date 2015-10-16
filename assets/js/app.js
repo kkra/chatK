@@ -56,7 +56,6 @@ app.controller('homeCtrl', function($scope, $firebaseArray) {
 		}else{
 			localStorage.align = item;
 		}
-		 
 
 	    if(localStorage.nombre && localStorage.color){
 	        $(".success-visible").fadeIn();
@@ -76,15 +75,16 @@ app.controller('homeCtrl', function($scope, $firebaseArray) {
     		$(".success-visible").fadeOut();
     	},5000);
 
+    setTimeout(
+    	function(){ 
+    		var scroll_chat = $(".chat-list-msg").prop('scrollHeight');
+			$(".chat-list-msg").animate({scrollTop: scroll_chat}, 1000);
+    	},3000);
+
     $("#updateBtn").click(function() {
     	$(".no-logeado").slideDown();
     });
 
-	$scope.currentime = function(){
-		var d = Date.now();
-	    return d;
-	}
-	
 	$scope.loadInfo();
 
 	$( "#chat" ).keypress(function( event ) {
@@ -94,12 +94,10 @@ app.controller('homeCtrl', function($scope, $firebaseArray) {
 	});
 	
 	$scope.nuevoMsg = function() {
-		var currentime = $scope.currentime();
 		if(localStorage.nombre && localStorage.color){
 			if($scope.message){
 				$scope.Messages.$add({
 					message: $scope.message,
-					date: currentime,
 					username: localStorage.nombre,
 					color: localStorage.color,
 					align: localStorage.align
